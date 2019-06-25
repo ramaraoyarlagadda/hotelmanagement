@@ -6,10 +6,11 @@ import com.cg.ohms.exceptions.InValidHotelNameException;
 import com.cg.ohms.exceptions.InValidNumberOfRoomsException;
 
 public class ValidateHotelDetails {
+	
 	public boolean isValidHotelId(int hotelId) throws InValidHotelIdException{
 		String id=Integer.toString(hotelId);
 		if(!id.matches("^[0-9]{2,5}$")) {
-			throw new InValidHotelIdException("Enter only numbers upto 5 digits only");
+			throw new InValidHotelIdException("Enter numbers upto 5 digits only");
 		}
 		return true;
 	}
@@ -34,5 +35,7 @@ public class ValidateHotelDetails {
 		}
 		return true;
 	}
+	
+	
 
 }
